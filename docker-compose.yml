@@ -1,0 +1,12 @@
+version: '2'
+services:
+  gitlab:
+    image: debian:8.6
+    container_name: gitlab2
+    #restart: always
+    network_mode: mybridge
+    privileged: true
+    tty: true
+    command: cat
+    volumes:
+      - "/lib/modules:/lib/modules:ro"
